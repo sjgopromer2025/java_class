@@ -16,7 +16,8 @@ public class test {
 		System.out.println(number1);
 		System.out.println(number2);
 		
-		
+		System.out.println("number1의 주소값 : " + System.identityHashCode(number1)); // 주소값 출력
+		System.out.println("number2의 주소값 : " + System.identityHashCode(number2)); // 주소값 출력
 		
 		
 		
