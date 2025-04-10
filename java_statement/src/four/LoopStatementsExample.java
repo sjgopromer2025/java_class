@@ -12,10 +12,10 @@ public class LoopStatementsExample {
         // 2. while 문
         // 조건이 참인 동안 반복 실행
         System.out.println("\nwhile 문 예제:");
-        int count = 1;
-        while (count <= 5) {
+        int count = 1; // 초기화
+        while (count <= 5) { // 조건식
             System.out.println("count: " + count); // 1부터 5까지 출력
-            count++;
+            count++; // 증감식
         }
 
         // 3. do-while 문

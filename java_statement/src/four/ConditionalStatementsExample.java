@@ -6,10 +6,10 @@ public class ConditionalStatementsExample {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // 1. if 문
         System.out.println("숫자를 입력하세요:");
         int number = scanner.nextInt();
 
+        // 1. if 문
         if (number > 0) {
             System.out.println("입력한 숫자는 양수입니다.");
         }
@@ -28,6 +28,13 @@ public class ConditionalStatementsExample {
             System.out.println("입력한 숫자는 음수입니다.");
         } else {
             System.out.println("입력한 숫자는 0입니다.");
+        }
+
+        // 4. if 문을 중첩하여 사용
+        if (number > 0) {
+            if (number % 2 == 0) {
+                System.out.println("입력한 숫자는 양수이고 짝수입니다.");
+            }
         }
 
         // 4. switch 문
