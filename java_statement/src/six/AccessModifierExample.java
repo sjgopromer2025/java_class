@@ -7,6 +7,9 @@ public class AccessModifierExample {
         // 2. public, private, protected, default가 있습니다.
 
         Account account = new Account("홍길동", 1000);
+
+        account.ss = "1234"; // public 접근 가능
+        System.out.println("계좌 소유자: " + account.ss); // public 접근 가능
         System.out.println("계좌 소유자: " + account.getOwner());
         System.out.println("잔액: " + account.getBalance());
 
@@ -22,6 +25,7 @@ public class AccessModifierExample {
 class Account {
     private String owner; // 계좌 소유자
     private int balance; // 잔액
+    public String ss;
 
     // 생성자
     public Account(String owner, int balance) {

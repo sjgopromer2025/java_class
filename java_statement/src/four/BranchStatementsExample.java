@@ -33,6 +33,6 @@ public class BranchStatementsExample {
             System.out.println("조건이 참이므로 메서드를 종료합니다.");
             return; // 메서드 종료
         }
-        System.out.println("이 코드는 실행되지 않습니다.");
+        // System.out.println("이 코드는 실행되지 않습니다.");
     }
 }

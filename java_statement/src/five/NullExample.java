@@ -14,7 +14,7 @@ public class NullExample {
         if (nullString == null) {
             System.out.println("nullString은 null입니다.");
         } else {
-            System.out.println("nullString은 null이 아닙니다.");
+            // System.out.println("nullString은 null이 아닙니다.");
         }
 
         // null 값을 참조하려고 하면 NullPointerException 발생
