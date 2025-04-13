@@ -2,119 +2,89 @@ package seven;
 
 // 추상 클래스
 abstract class Shape {
-    public abstract void draw(); // 추상 메서드
+    private String color; // 공통 속성
 
+    // 생성자
+    public Shape(String color) {
+        this.color = color;
+    }
+
+    // Getter
+    public String getColor() {
+        return color;
+    }
+
+    // Setter
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    // 추상 메서드
+    public abstract void draw(); // 각 도형의 그리기 방식 정의
+
+    // 공통 메서드
     public void display() {
-        System.out.println("도형 클래스입니다.");
+        System.out.println("이 도형의 색상은 " + color + "입니다.");
     }
 }
 
-// 자식 클래스
+// 자식 클래스 1: 원
 class Circle extends Shape {
+    private double radius;
+
+    public Circle(String color, double radius) {
+        super(color); // 부모 클래스 생성자 호출
+        this.radius = radius;
+    }
+
     @Override
     public void draw() {
-        .clone()
+        System.out.println("원을 그립니다. 반지름: " + radius);
+    }
 
+    public double calculateArea() {
+        return Math.PI * radius * radius; // 원의 면적 계산
+    }
+}
 
-        \
-        \
-        System.out.println("원을 그립니다.");
+// 자식 클래스 2: 사각형
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(String color, double width, double height) {
+        super(color); // 부모 클래스 생성자 호출
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("사각형을 그립니다. 너비: " + width + ", 높이: " + height);
+    }
+
+    public double calculateArea() {
+        return width * height; // 사각형의 면적 계산
     }
 }
 
 public class AbstractClassExample {
     public static void main(String[] args) {
-        Circle shape = new Circle();
-        shape.display();
-        shape.draw();
+        // Circle 객체 생성
+        Shape circle = new Circle("빨간색", 5.0);
+        circle.display();
+        circle.draw();
+        System.out.println("원의 면적: " + ((Circle) circle).calculateArea());
+
+        System.out.println();
+
+        // Rectangle 객체 생성
+        Shape rectangle = new Rectangle("파란색", 4.0, 6.0);
+        rectangle.display();
+        rectangle.draw();
+        System.out.println("사각형의 면적: " + ((Rectangle) rectangle).calculateArea());
     }
 }
-
-// // 추상 클래스
-// abstract class Shape {
-// private String color; // 공통 속성
-
-// // 생성자
-// public Shape(String color) {
-// this.color = color;
-// }
-
-// // Getter
-// public String getColor() {
-// return color;
-// }
-
-// // Setter
-// public void setColor(String color) {
-// this.color = color;
-// }
-
-// // 추상 메서드
-// public abstract void draw(); // 각 도형의 그리기 방식 정의
-
-// // 공통 메서드
-// public void display() {
-// System.out.println("이 도형의 색상은 " + color + "입니다.");
-// }
-// }
-
-// // 자식 클래스 1: 원
-// class Circle extends Shape {
-// private double radius;
-
-// public Circle(String color, double radius) {
-// super(color); // 부모 클래스 생성자 호출
-// this.radius = radius;
-// }
-
-// @Override
-// public void draw() {
-// System.out.println("원을 그립니다. 반지름: " + radius);
-// }
-
-// public double calculateArea() {
-// return Math.PI * radius * radius; // 원의 면적 계산
-// }
-// }
-
-// // 자식 클래스 2: 사각형
-// class Rectangle extends Shape {
-// private double width;
-// private double height;
-
-// public Rectangle(String color, double width, double height) {
-// super(color); // 부모 클래스 생성자 호출
-// this.width = width;
-// this.height = height;
-// }
-
-// @Override
-// public void draw() {
-// System.out.println("사각형을 그립니다. 너비: " + width + ", 높이: " + height);
-// }
-
-// public double calculateArea() {
-// return width * height; // 사각형의 면적 계산
-// }
-// }
-
-// public class AbstractClassExample {
-// public static void main(String[] args) {
-// // Circle 객체 생성
-// Shape circle = new Circle("빨간색", 5.0);
-// circle.display();
-// circle.draw();
-// System.out.println("원의 면적: " + ((Circle) circle).calculateArea());
-
-// System.out.println();
-
-// // Rectangle 객체 생성
-// Shape rectangle = new Rectangle("파란색", 4.0, 6.0);
-// rectangle.display();
-// rectangle.draw();
-// System.out.println("사각형의 면적: " + ((Rectangle) rectangle).calculateArea());
-// }
-// }
 
 /*
  * 이론 설명:
