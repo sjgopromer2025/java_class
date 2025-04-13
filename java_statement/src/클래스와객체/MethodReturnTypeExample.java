@@ -3,6 +3,22 @@ package 클래스와객체;
 public class MethodReturnTypeExample {
     // 메서드 리턴 타입 예제
 
+	// Person 클래스 정의
+	class Person {
+	    private String name;
+	    private int age;
+
+	    public Person(String name, int age) {
+	        this.name = name;
+	        this.age = age;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return "Person{name='" + name + "', age=" + age + "}";
+	    }
+	}
+
     // 1. void 리턴 타입: 값을 반환하지 않는 메서드
     public void printMessage(String message) {
         System.out.println("메시지: " + message);
@@ -56,21 +72,6 @@ public class MethodReturnTypeExample {
     }
 }
 
-// Person 클래스 정의
-class Person {
-    private String name;
-    private int age;
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{name='" + name + "', age=" + age + "}";
-    }
-}
 
 /*
  * 이론 설명:

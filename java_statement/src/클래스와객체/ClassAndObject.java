@@ -1,27 +1,13 @@
 package 클래스와객체;
 
-public class ClassAndObject {
-    public static void main(String[] args) {
-        // 클래스와 객체의 관계 이해
-        // 1. 클래스는 객체를 생성하기 위한 설계도입니다.
-        // 2. 객체는 클래스에서 생성된 인스턴스입니다.
-
-        // Person 클래스의 객체 생성
-        Person person = new Person("홍길동", 25, "서울");
-        System.out.println("이름: " + person.getName());
-        System.out.println("나이: " + person.getAge());
-        System.out.println("주소: " + person.getAddress());
-    }
-}
-
 // Person 클래스 정의
-class Person {
+class Person1 {
     private String name; // 이름
     private int age; // 나이
     private String address; // 주소
 
     // 생성자
-    public Person(String name, int age, String address) {
+    public Person1(String name, int age, String address) {
         this.name = name;
         this.age = age;
         this.address = address;
@@ -38,6 +24,21 @@ class Person {
 
     public String getAddress() {
         return address;
+    }
+}
+
+public class ClassAndObject {
+
+    public static void main(String[] args) {
+        // 클래스와 객체의 관계 이해
+        // 1. 클래스는 객체를 생성하기 위한 설계도입니다.
+        // 2. 객체는 클래스에서 생성된 인스턴스입니다.
+
+        // Person 클래스의 객체 생성
+        Person1 person = new Person1("홍길동", 25, "서울");
+        System.out.println("이름: " + person.getName());
+        System.out.println("나이: " + person.getAge());
+        System.out.println("주소: " + person.getAddress());
     }
 }
 
