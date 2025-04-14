@@ -1,0 +1,3 @@
+Hello world! This is a test.
+Java programming is fun.
+File handling in Java.

@@ -1,0 +1,4 @@
+Line 1: 6 words
+Line 2: 4 words
+Line 3: 4 words
+Total: 14 words

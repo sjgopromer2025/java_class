@@ -1,4 +1,4 @@
-package 스레드;
+package 멀티스레드;
 
 public class ThreadConcept {
     public static void main(String[] args) {

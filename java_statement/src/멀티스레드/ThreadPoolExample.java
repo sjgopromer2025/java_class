@@ -1,4 +1,4 @@
-package 스레드;
+package 멀티스레드;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
